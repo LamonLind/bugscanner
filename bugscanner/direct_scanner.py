@@ -68,7 +68,6 @@ class DirectScanner(BugScanner):
 		}
 
 		if response is not None:
-			return
 			color = ''
 			status_code = response.status_code
 			server = response.headers.get('server', '')
