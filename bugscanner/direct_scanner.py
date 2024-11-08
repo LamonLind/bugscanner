@@ -9,6 +9,8 @@ class DirectScanner(BugScanner):
 	def log_info(self, **kwargs):
 		for x in ['color', 'status_code', 'server']:
 			kwargs[x] = kwargs.get(x, '')
+		if not kwargs.get('status_code'):
+			return
 
 		W2 = self.logger.special_chars['W2']
 		G1 = self.logger.special_chars['G1']
@@ -75,7 +77,9 @@ class DirectScanner(BugScanner):
 
 			if response is None:
 				return
-			if status_code == '':
+
+			status_code = response.status_code
+			if not status_code:
 				return
 
 			if status_code == 302:
