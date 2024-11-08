@@ -69,10 +69,13 @@ class DirectScanner(BugScanner):
 
 		if response is not None:
 			return
-			#color = ''
-			#status_code = response.status_code
-			#server = response.headers.get('server', '')
-			#location = response.headers.get('location', '')
+			color = ''
+			status_code = response.status_code
+			server = response.headers.get('server', '')
+			location = response.headers.get('location', '')
+
+			if response is None:
+				return
 
 			if status_code == 302:
 				return
