@@ -11,7 +11,7 @@ setuptools.setup(
 	description="Bug Scanner for Internet Freedom (Domain Fronting, Server Name Indication, Etc)",
 	long_description=long_description,
 	long_description_content_type="text/markdown",
-	url="https://github.com/aztecrabbit/bugscanner",
+	url="https://github.com/LamonLind/bugscanner",
 	packages=setuptools.find_packages(),
 	classifiers=[
 		"Programming Language :: Python :: 3",
