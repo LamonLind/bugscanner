@@ -76,6 +76,8 @@ class DirectScanner(BugScanner):
 
 			if response is None:
 				return
+			if status_code == '':
+				return
 
 			if status_code == 302:
 				return
