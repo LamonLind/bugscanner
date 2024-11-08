@@ -74,7 +74,7 @@ class DirectScanner(BugScanner):
 			location = response.headers.get('location', '')
 
 			if status_code == 302:
-				''
+				return
 			if server in ['AkamaiGHost']:
 				if status_code == 400:
 					color = G1
