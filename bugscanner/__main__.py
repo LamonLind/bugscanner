@@ -102,7 +102,7 @@ def main():
 
 	if arguments.output:
 		with open(arguments.output, 'w+') as file:
-			file.write('\n'.join([ str(x) for x in scanner.success_list() ]) + '\n')
+			file.write('\n'.join([x['host'] for x in scanner.success_list()]) + '\n')
 
 
 if __name__ == '__main__':
